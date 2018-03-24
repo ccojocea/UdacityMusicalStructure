@@ -77,11 +77,11 @@
         </LinearLayout>
 
     <ImageButton
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/button_size_medium"
+        android:layout_height="@dimen/button_size_medium"
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
-        android:background="@drawable/play_button_big"/>
+        android:background="@drawable/play_button"/>
 
     <View
         android:layout_width="match_parent"

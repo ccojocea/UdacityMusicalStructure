@@ -46,7 +46,7 @@ public class Song {
         artistName = art;
         albumName = alb;
         if(imgId == 0){
-            songImageId = R.drawable.musical_note512w1;
+            songImageId = R.drawable.musical_note512w2;
         } else {
             songImageId = imgId;
         }

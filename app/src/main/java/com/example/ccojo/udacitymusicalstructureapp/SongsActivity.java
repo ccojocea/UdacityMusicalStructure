@@ -2,6 +2,9 @@ package com.example.ccojo.udacitymusicalstructureapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -12,6 +15,7 @@ public class SongsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_songs);
+
         ArrayList<Song> songs = new ArrayList<>();
         songs.add(new Song("Smack My Bitch Up", "Prodigy", "The Fat of the Land", R.drawable.fatoftheland, 235));
         songs.add(new Song("Breathe", "Prodigy", "The Fat of the Land", R.drawable.fatoftheland, 213));

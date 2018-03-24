@@ -90,46 +90,46 @@
         android:layout_height="wrap_content"
         android:gravity="center">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/previous_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/button_size_small"
+            android:layout_height="@dimen/button_size_small"
             android:layout_centerVertical="true"
-            android:src="@drawable/previous32w" />
+            android:background="@drawable/previous_button" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/shuffle_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/button_size_small"
+            android:layout_height="@dimen/button_size_small"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/previous_button"
-            android:src="@drawable/shuffle32w"
+            android:background="@drawable/shuffle_button"
             android:layout_margin="@dimen/default_margin" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/play_pause_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/shuffle_button"
-            android:src="@drawable/play"/>
+            android:background="@drawable/play_button"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/repeat_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/button_size_small"
+            android:layout_height="@dimen/button_size_small"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/play_pause_button"
             android:layout_margin="@dimen/default_margin"
-            android:src="@drawable/repeat32w"/>
+            android:background="@drawable/repeat_button"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/next_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/button_size_small"
+            android:layout_height="@dimen/button_size_small"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/repeat_button"
-            android:src="@drawable/next32w" />
+            android:background="@drawable/next_button" />
 
     </RelativeLayout>
 

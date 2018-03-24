@@ -8,7 +8,7 @@
     <dimen name="font_size_xs">12sp</dimen>
     <dimen name="font_size_default">16sp</dimen>
     <dimen name="font_size_xl">24sp</dimen>
-    <dimen name="button_size_small">32dp</dimen>
-    <dimen name="button_size_medium">48p</dimen>
+    <dimen name="button_size_small">40dp</dimen>
+    <dimen name="button_size_medium">48dp</dimen>
     <dimen name="button_size_big">64dp</dimen>
 </resources>
