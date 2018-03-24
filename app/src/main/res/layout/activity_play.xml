@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xl"
+        android:src="@drawable/musical_note512w1"
+        android:adjustViewBounds="true" />
+
+    <TextView
+        style="@style/text_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_xl"
+        tools:text="Song Name" />
+
+    <TextView
+        style="@style/text_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Song Artist" />
+
+    <TextView
+        style="@style/text_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Song Album" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/previous_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/previous32w" />
+
+        <ImageView
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/previous_button"
+            android:src="@drawable/stop32w"
+            android:layout_margin="@dimen/default_margin" />
+
+        <ImageView
+            android:id="@+id/play_pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/stop_button"
+            android:src="@drawable/play64w"/>
+
+        <ImageView
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/play_pause_button"
+            android:src="@drawable/next32w"
+            android:layout_margin="@dimen/default_margin" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

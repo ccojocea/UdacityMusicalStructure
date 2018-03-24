@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Udacity Musical Structure App</string>
+    <string name="category_play">Play</string>
+    <string name="category_playlists">Playlists</string>
+    <string name="category_artists">Artists</string>
+    <string name="category_albums">Albums</string>
+    <string name="category_songs">Songs</string>
+</resources>

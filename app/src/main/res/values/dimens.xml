@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="margin_xl">32dp</dimen>
+    <dimen name="font_size_xxs">12sp</dimen>
+    <dimen name="font_size_xs">12sp</dimen>
+    <dimen name="font_size_default">16sp</dimen>
+    <dimen name="font_size_xl">24sp</dimen>
+</resources>
