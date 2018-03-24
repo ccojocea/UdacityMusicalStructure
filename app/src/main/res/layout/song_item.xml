@@ -1,57 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/colorPrimary"
     android:padding="@dimen/default_padding">
 
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/songNameTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall"
-        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        tools:text="Song Name" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
         <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/songArtistTextView"
+            style="@style/text_default"
+            android:id="@+id/songNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall"
             android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
             android:paddingStart="?android:attr/listPreferredItemPaddingStart"
             android:textAppearance="?android:attr/textAppearanceListItemSmall"
-            android:textSize="@dimen/font_size_xs"
-            tools:text="Song Artist" />
+            tools:text="Song Name" />
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:backgroundTint="@color/viewSeparatorColor">
-        </View>
-
-        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/songAlbumTextView"
+        <LinearLayout
+            android:id="@+id/artist_album_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-            android:textAppearance="?android:attr/textAppearanceListItemSmall"
-            android:textSize="@dimen/font_size_xs"
-            tools:text="Song Album" />
+            android:layout_below="@id/songNameTextView"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/text_default"
+                android:id="@+id/songArtistTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+                android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textSize="@dimen/font_size_xs"
+                tools:text="Song Artist" />
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/viewSeparatorColor">
+            </View>
 
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/text_default"
+                android:id="@+id/songAlbumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+                android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textSize="@dimen/font_size_xs"
+                tools:text="Song Album" />
 
-</LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/viewSeparatorColor">
+            </View>
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/text_default"
+                android:id="@+id/songLengthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+                android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textSize="@dimen/font_size_xs"
+                tools:text="3:35" />
+
+        </LinearLayout>
+
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/play_button_big"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"
+        android:layout_marginTop="@dimen/margin_xs"
+        android:layout_below="@id/artist_album_layout"/>
+
+</RelativeLayout>

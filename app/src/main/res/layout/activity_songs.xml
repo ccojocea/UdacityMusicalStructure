@@ -7,5 +7,11 @@
     android:background="@android:color/black"
     android:orientation="vertical">
 
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.ccojo.udacitymusicalstructureapp.SongsActivity">
+    </ListView>
 
 </LinearLayout>

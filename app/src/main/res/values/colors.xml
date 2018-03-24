@@ -3,6 +3,7 @@
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#ffffff</color>
+    <color name="colorLine">#616161</color>
     <color name="viewSeparatorColor">#ffffff</color>
     <color name="textColor">#ffffff</color>
 </resources>
