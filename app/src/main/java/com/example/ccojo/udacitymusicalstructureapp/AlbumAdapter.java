@@ -1,6 +1,7 @@
 package com.example.ccojo.udacitymusicalstructureapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -24,7 +25,7 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, @Nullable View convertView, @NonNull final ViewGroup parent) {
         Album currentAlbum = getItem(position);
 
         View gridItemView = convertView;
@@ -39,6 +40,25 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
         albumImg.setImageResource(currentAlbum.getAlbumArt());
         albumNameTV.setText(currentAlbum.getAlbumName());
         artistNameTV.setText(currentAlbum.getArtistName());
+
+        albumImg.setTag(position);
+        albumImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = (Integer) view.getTag();
+                Album album = getItem(position);
+
+                String albumName = album.getAlbumName();
+                String artistName = album.getArtistName();
+                int fromAlbumsID = 1;
+
+                Intent intent = new Intent(parent.getContext(), SongsActivity.class);
+                intent.putExtra("ALBUM_NAME", albumName);
+                intent.putExtra("ARTIST_NAME", artistName);
+                intent.putExtra("REFERENCE", fromAlbumsID);
+                parent.getContext().startActivity(intent);
+            }
+        });
 
         return gridItemView;
     }
