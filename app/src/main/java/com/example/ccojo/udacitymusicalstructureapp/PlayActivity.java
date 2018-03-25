@@ -50,6 +50,21 @@ public class PlayActivity extends AppCompatActivity {
             songArtist.setText(artist);
             songAlbum.setText(album);
             songArtImageView.setImageResource(artId);
+        } else {
+            for (Song song : MainActivity.allSongs){
+                String name = song.getSongName();
+                String artist = song.getArtistName();
+                String album = song.getAlbumName();
+                int artId = song.getSongImageId();
+
+                songName.setText(name);
+                songArtist.setText(artist);
+                songAlbum.setText(album);
+                songArtImageView.setImageResource(artId);
+
+                //get only the first song:
+                break;
+            }
         }
 
         playPauseButton.setOnClickListener(new View.OnClickListener() {

@@ -11,7 +11,7 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginBottom="@dimen/margin_xs"
-        android:src="@drawable/musical_note512w2"/>
+        android:src="@drawable/smile"/>
 
     <TextView
         android:id="@+id/artist_name_tv"

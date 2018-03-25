@@ -5,47 +5,139 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
-    android:padding="@dimen/default_padding"
+    android:padding="@dimen/padding_xl"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/albums"
-        android:layout_weight="1"
-        style="@style/MainMenuStyle"
-        android:text="@string/category_albums"
-        android:textSize="@dimen/font_size_xl"
-        android:textAlignment="center"/>
 
-    <TextView
-        android:id="@+id/artists"
-        android:layout_weight="1"
-        style="@style/MainMenuStyle"
-        android:text="@string/category_artists"
-        android:textSize="@dimen/font_size_xl"
-        android:textAlignment="center"/>
 
-    <TextView
-        android:id="@+id/songs"
-        android:layout_weight="1"
-        style="@style/MainMenuStyle"
-        android:text="@string/category_songs"
-        android:textSize="@dimen/font_size_xl"
-        android:textAlignment="center"/>
+    <LinearLayout
+        android:id="@+id/songs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/playlists"
-        android:layout_weight="1"
-        style="@style/MainMenuStyle"
-        android:text="@string/category_playlists"
-        android:textSize="@dimen/font_size_xl"
-        android:textAlignment="center"/>
+        <ImageView
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_width="@dimen/main_menu_icon"
+            android:layout_height="@dimen/main_menu_icon"
+            android:src="@drawable/songs_button"/>
 
-    <TextView
-        android:id="@+id/play"
+        <TextView
+            android:id="@+id/songs"
+            android:layout_marginEnd="@dimen/margin_xl"
+            style="@style/MainMenuStyle"
+            android:text="@string/category_songs"
+            android:textSize="@dimen/font_size_xl"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/albums_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_width="@dimen/main_menu_icon"
+            android:layout_height="@dimen/main_menu_icon"
+            android:src="@drawable/albums_button"/>
+
+        <TextView
+            android:id="@+id/albums"
+            android:layout_marginEnd="@dimen/margin_xl"
+            style="@style/MainMenuStyle"
+            android:text="@string/category_albums"
+            android:textAlignment="center"
+            android:textSize="@dimen/font_size_xl" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/artists_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="@dimen/main_menu_icon"
+            android:layout_height="@dimen/main_menu_icon"
+            android:layout_marginStart="@dimen/default_margin"
+            android:src="@drawable/artists_button" />
+
+        <TextView
+            android:id="@+id/artists"
+            android:layout_marginEnd="@dimen/margin_xl"
+            style="@style/MainMenuStyle"
+            android:text="@string/category_artists"
+            android:textSize="@dimen/font_size_xl"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playlists_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_width="@dimen/main_menu_icon"
+            android:layout_height="@dimen/main_menu_icon"
+            android:src="@drawable/playlists_button"/>
+
+        <TextView
+            android:id="@+id/playlists"
+            android:layout_marginEnd="@dimen/margin_xl"
+            style="@style/MainMenuStyle"
+            android:text="@string/category_playlists"
+            android:textSize="@dimen/font_size_xl"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/play_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_width="@dimen/main_menu_icon"
+            android:layout_height="@dimen/main_menu_icon"
+            android:src="@drawable/play_button"/>
+
+        <TextView
+            android:id="@+id/play"
+            android:layout_marginEnd="@dimen/margin_xl"
+            style="@style/MainMenuStyle"
+            android:text="@string/category_play"
+            android:textSize="@dimen/font_size_xl"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mute_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        style="@style/MainMenuStyle"
-        android:text="@string/category_play"
-        android:textSize="@dimen/font_size_xl"
-        android:textAlignment="center"/>
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/mute"
+            android:layout_width="@dimen/main_menu_icon"
+            android:layout_height="@dimen/main_menu_icon"
+            android:src="@drawable/mute_button" />
+
+    </LinearLayout>
 
 </LinearLayout>

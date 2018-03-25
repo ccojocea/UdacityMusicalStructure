@@ -26,7 +26,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size_xl"
-            android:text="Song Name Placeholder"
             tools:text="Song Name" />
 
         <TextView
@@ -34,7 +33,6 @@
             style="@style/text_default"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Song Artist Placeholder"
             tools:text="Song Artist" />
 
         <TextView
@@ -42,7 +40,6 @@
             style="@style/text_default"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Song Album Placeholder"
             tools:text="Song Album" />
 
     </LinearLayout>
@@ -62,7 +59,8 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size_xxs"
             android:layout_alignParentStart="true"
-            android:text="1:40" />
+            android:text="1:40"
+            tools:text="1:40"/>
 
         <android.support.v7.widget.AppCompatSeekBar
             android:id="@+id/seek_bar"
@@ -81,7 +79,8 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size_xxs"
             android:layout_alignParentEnd="true"
-            android:text="3:20" />
+            android:text="3:20"
+            tools:text="3:20"/>
 
     </RelativeLayout>
 

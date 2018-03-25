@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    static ArrayList<Song> allSongs = new ArrayList<>();
+    public static ArrayList<Song> allSongs = new ArrayList<>();
+    private boolean isMute = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,16 +20,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Background music service
-//        Intent svc=new Intent(this, BackgroundSoundService.class);
-//        startService(svc);
+        final Intent svc = new Intent(this, BackgroundSoundService.class);
 
-        TextView tv_play = findViewById(R.id.play);
-        TextView tv_playlists = findViewById(R.id.playlists);
-        TextView tv_artists = findViewById(R.id.artists);
-        TextView tv_albums = findViewById(R.id.albums);
-        TextView tv_songs = findViewById(R.id.songs);
+        final ImageView muteView = findViewById(R.id.mute);
+        muteView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isMute){
+                    startService(svc);
+                    muteView.setImageResource(R.drawable.mute_button_toggle);
+                    isMute = false;
+                } else {
+                    muteView.setImageResource(R.drawable.mute_button);
+                    stopService(svc);
+                    isMute = true;
+                }
+            }
+        });
 
-        tv_play.setOnClickListener(new View.OnClickListener() {
+        LinearLayout linPlay = findViewById(R.id.play_layout);
+        LinearLayout linPlaylists = findViewById(R.id.playlists_layout);
+        LinearLayout linArtists = findViewById(R.id.artists_layout);
+        LinearLayout linAlbums = findViewById(R.id.albums_layout);
+        LinearLayout linSongs = findViewById(R.id.songs_layout);
+
+        linPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, PlayActivity.class);
@@ -34,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tv_playlists.setOnClickListener(new View.OnClickListener() {
+        linPlaylists.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, PlaylistsActivity.class);
@@ -42,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tv_artists.setOnClickListener(new View.OnClickListener() {
+        linArtists.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ArtistsActivity.class);
@@ -50,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tv_albums.setOnClickListener(new View.OnClickListener() {
+        linAlbums.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AlbumsActivity.class);
@@ -58,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tv_songs.setOnClickListener(new View.OnClickListener() {
+        linSongs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SongsActivity.class);
@@ -66,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        allSongs.add(new Song("Smack My Bitch Up", R.drawable.smackmybitchup, "Prodigy", R.drawable.prodigy, "The Fat of the Land", R.drawable.fatoftheland, 235));
         allSongs.add(new Song("Breathe", R.drawable.breathe,"Prodigy", R.drawable.prodigy, "The Fat of the Land", R.drawable.fatoftheland, 213));
+        allSongs.add(new Song("Smack My Bitch Up", R.drawable.smackmybitchup, "Prodigy", R.drawable.prodigy, "The Fat of the Land", R.drawable.fatoftheland, 235));
         allSongs.add(new Song("Firestarter", R.drawable.firestarter,"Prodigy", R.drawable.prodigy, "The Fat of the Land", R.drawable.fatoftheland, 205));
         allSongs.add(new Song("Narayan", 0,"Prodigy", R.drawable.prodigy, "The Fat of the Land", R.drawable.fatoftheland, 275));
         allSongs.add(new Song("Mindfields", 0,"Prodigy", R.drawable.prodigy, "The Fat of the Land", R.drawable.fatoftheland, 312));
