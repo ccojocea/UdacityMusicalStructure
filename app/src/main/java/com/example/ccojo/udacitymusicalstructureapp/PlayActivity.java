@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,9 @@ public class PlayActivity extends AppCompatActivity {
     TextView songName;
     TextView songArtist;
     TextView songAlbum;
+    TextView elapsedTimeTV;
+    TextView totalTimeTV;
+    SeekBar seekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,9 @@ public class PlayActivity extends AppCompatActivity {
         songName = findViewById(R.id.song_name);
         songAlbum = findViewById(R.id.song_album);
         songArtist = findViewById(R.id.song_artist);
+        seekBar = findViewById(R.id.seek_bar);
+        elapsedTimeTV = findViewById(R.id.elapsed_time);
+        totalTimeTV = findViewById(R.id.total_time);
 
         //Check extra bundle
         Bundle extras = getIntent().getExtras();
@@ -123,6 +130,36 @@ public class PlayActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(PlayActivity.this, "Next song - not implemented", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        //Initial seekbar implementation
+        //TODO Get the max value from current song (pass Songs through intent, not name etc)
+        seekBar.setMax(200);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                if(i >= 3600){
+                    String asTextHours = String.format("%02d:%02d:%02d", i/3600, (i % 3600)/60, (i % 3600)%60);
+                    elapsedTimeTV.setText(asTextHours);
+                }else if(i >= 60){
+                    String asTextMinutes = String.format("%02d:%02d", i/60, i % 60);
+                    elapsedTimeTV.setText(asTextMinutes);
+                } else {
+                    final String asTextSeconds = String.format("%d", i);
+                    elapsedTimeTV.setText("00:" + asTextSeconds);
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
             }
         });
     }

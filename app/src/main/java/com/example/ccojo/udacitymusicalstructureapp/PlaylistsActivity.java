@@ -38,6 +38,14 @@ public class PlaylistsActivity extends AppCompatActivity {
         playlists.get(1).addSong(MainActivity.allSongs.get(6));
         playlists.get(2).addSong(MainActivity.allSongs.get(7));
         playlists.get(2).addSong(MainActivity.allSongs.get(8));
+        playlists.add(new Playlist("Empty playlist 1"));
+        playlists.add(new Playlist("Empty playlist 2"));
+        playlists.add(new Playlist("Empty playlist 3"));
+        playlists.add(new Playlist("Empty playlist 4"));
+        playlists.add(new Playlist("Empty playlist 5"));
+        playlists.add(new Playlist("Empty playlist 6"));
+        playlists.add(new Playlist("Empty playlist 7"));
+        playlists.add(new Playlist("Empty playlist 8"));
 
         PlaylistAdapter playadp = new PlaylistAdapter(this, playlists);
         ListView lv = findViewById(R.id.list_view);
