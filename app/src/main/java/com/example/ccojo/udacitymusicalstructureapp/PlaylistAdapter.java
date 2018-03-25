@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.List;
 
 /**
@@ -49,6 +51,30 @@ public class PlaylistAdapter extends ArrayAdapter<Playlist> {
                 intent.putExtra("REFERENCE", fromPlaylistsID);
                 intent.putExtra("PLAYLIST", playlist);
                 parent.getContext().startActivity(intent);
+            }
+        });
+
+        ImageButton deleteButton = listItemView.findViewById(R.id.delete_playlist_button);
+        deleteButton.setTag(position);
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = (Integer) view.getTag();
+                Playlist playlist = getItem(position);
+
+                Toast.makeText(parent.getContext(), "Delete playlist - not implemented", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageButton editButton = listItemView.findViewById(R.id.item_options_button);
+        editButton.setTag(position);
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = (Integer) view.getTag();
+                Playlist playlist = getItem(position);
+
+                Toast.makeText(parent.getContext(), "Edit playlist - not implemented", Toast.LENGTH_SHORT).show();
             }
         });
 
