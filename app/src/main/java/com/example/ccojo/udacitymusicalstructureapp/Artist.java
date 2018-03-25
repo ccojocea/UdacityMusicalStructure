@@ -1,5 +1,7 @@
 package com.example.ccojo.udacitymusicalstructureapp;
 
+import android.util.Log;
+
 /**
  * Created by ccojo on 3/24/2018.
  */
@@ -10,11 +12,7 @@ public class Artist {
 
     public Artist(String artistName, int artistArtId){
         this.artistName = artistName;
-        if(artistArtId != 0){
-            this.artistArt = artistArtId;
-        } else {
-            this.artistArt = R.drawable.smile;
-        }
+        this.artistArt = artistArtId;
     }
 
     public String getArtistName() {
@@ -23,5 +21,17 @@ public class Artist {
 
     public int getArtistArt() {
         return artistArt;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.artistName.equals(((Artist)obj).artistName);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 35;
+        hash = 53 * hash + (this.artistName != null ? this.artistName.hashCode() : 0);
+        return hash;
     }
 }
