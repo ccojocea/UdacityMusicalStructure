@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Background music service
+//        Intent svc=new Intent(this, BackgroundSoundService.class);
+//        startService(svc);
+
         TextView tv_play = findViewById(R.id.play);
         TextView tv_playlists = findViewById(R.id.playlists);
         TextView tv_artists = findViewById(R.id.artists);

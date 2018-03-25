@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PlayActivity extends AppCompatActivity {
@@ -16,6 +18,10 @@ public class PlayActivity extends AppCompatActivity {
     ImageButton repeatButton;
     ImageButton previousButton;
     ImageButton nextButton;
+    ImageView songArtImageView;
+    TextView songName;
+    TextView songArtist;
+    TextView songAlbum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,25 @@ public class PlayActivity extends AppCompatActivity {
         repeatButton = findViewById(R.id.repeat_button);
         previousButton = findViewById(R.id.previous_button);
         nextButton = findViewById(R.id.next_button);
+        songArtImageView = findViewById(R.id.song_image);
+        songName = findViewById(R.id.song_name);
+        songAlbum = findViewById(R.id.song_album);
+        songArtist = findViewById(R.id.song_artist);
+
+        //Check extra bundle
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            String name = extras.getString("SONG_NAME");
+            String artist = extras.getString("SONG_ARTIST");
+            String album = extras.getString("SONG_ALBUM");
+            int artId = extras.getInt("SONG_ARTID");
+
+            songName.setText(name);
+            songArtist.setText(artist);
+            songAlbum.setText(album);
+            songArtImageView.setImageResource(artId);
+        }
+
         playPauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

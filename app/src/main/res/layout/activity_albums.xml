@@ -8,10 +8,18 @@
     android:background="@android:color/black"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_default"
+        android:text="@string/category_albums"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_xl"/>
+
     <GridView
         android:id="@+id/grid_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:numColumns="2"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"

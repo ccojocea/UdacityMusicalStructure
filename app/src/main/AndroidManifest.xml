@@ -27,6 +27,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".PlayActivity"
             android:screenOrientation="portrait"/>
+        <service android:enabled="true" android:name=".BackgroundSoundService" />
     </application>
 
 </manifest>

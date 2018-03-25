@@ -8,6 +8,14 @@
     android:background="@android:color/black"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_default"
+        android:text="@string/category_songs"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_xl"/>
+
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"

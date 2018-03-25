@@ -8,5 +8,12 @@
     android:background="@android:color/black"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_default"
+        android:text="@string/category_playlists"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_xl"/>
 
 </LinearLayout>
