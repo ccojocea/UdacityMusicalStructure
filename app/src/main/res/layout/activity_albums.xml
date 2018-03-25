@@ -8,5 +8,16 @@
     android:background="@android:color/black"
     android:orientation="vertical">
 
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        tools:context="com.example.ccojo.udacitymusicalstructureapp.AlbumsActivity">
+    </GridView>
 
 </LinearLayout>

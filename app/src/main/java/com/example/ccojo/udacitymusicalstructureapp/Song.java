@@ -12,6 +12,7 @@ public class Song {
     private String albumName;
     private int songImageId;
     private int songArtistArtId;
+    private int songAlbumArtId;
     private int songLength;
 
     public Song (String nm){
@@ -48,9 +49,9 @@ public class Song {
             songArtistArtId = artistArtId;
         }
         if(albumArtId == 0){
-            songImageId = R.drawable.music_album;
+            songAlbumArtId = R.drawable.music_album;
         } else {
-            songImageId = albumArtId;
+            songAlbumArtId = albumArtId;
         }
         if(songArtId == 0){
             songImageId = R.drawable.musical_note512w2;
@@ -87,5 +88,9 @@ public class Song {
 
     public int getArtistArt(){
         return songArtistArtId;
+    }
+
+    public int getSongAlbumArtId() {
+        return songAlbumArtId;
     }
 }

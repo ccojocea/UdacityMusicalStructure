@@ -25,7 +25,11 @@ public class Artist {
 
     @Override
     public boolean equals(Object obj) {
-        return this.artistName.equals(((Artist)obj).artistName);
+        if(obj instanceof Artist){
+            return this.artistName.equals(((Artist)obj).artistName);
+        } else {
+            return false;
+        }
     }
 
     @Override

@@ -24,18 +24,6 @@ public class ArtistsActivity extends AppCompatActivity {
             artists.add(artist);
         }
 
-        /*
-
-        artists.add(new Artist("Gaia", R.drawable.gaia));
-        artists.add(new Artist("Prodigy", R.drawable.prodigy));
-        artists.add(new Artist("Andain", 0));
-        artists.add(new Artist("Michael Jackson", 0));
-        artists.add(new Artist("Hans Zimmer", 0));
-        artists.add(new Artist("ATB", R.drawable.atb));
-        artists.add(new Artist("Armin van Buuren", 0));
-        artists.add(new Artist("Tiesto", 0));
-        */
-
         ArtistAdapter artistAdapter = new ArtistAdapter(this, artists);
         GridView gv = findViewById(R.id.grid_view);
         gv.setAdapter(artistAdapter);
