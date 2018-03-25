@@ -28,10 +28,6 @@ public class SongsActivity extends AppCompatActivity {
                 String albumName = extras.getString("ALBUM_NAME");
                 String artistName = extras.getString("ARTIST_NAME");
 
-                //TODO REMOVE THIS LOG
-                Log.d("FROM ALBUMS", "Artist Name: " + artistName);
-                Log.d("FROM ALBUMS", "Album Name: " + albumName);
-
                 songsToPlay = new ArrayList<>();
                 for(Song song : MainActivity.allSongs){
                     if (song.getAlbumName().equals(albumName) && song.getArtistName().equals(artistName)){
@@ -44,9 +40,6 @@ public class SongsActivity extends AppCompatActivity {
             } else if (extras.getInt("REFERENCE") == 2){
                 String artistName = extras.getString("ARTIST_NAME");
 
-                //TODO REMOVE THIS LOG
-                Log.d("FROM ARTISTS", "Artist Name: " + artistName);
-
                 songsToPlay = new ArrayList<>();
                 for(Song song : MainActivity.allSongs){
                     if (song.getArtistName().equals(artistName)){
@@ -54,6 +47,11 @@ public class SongsActivity extends AppCompatActivity {
                     }
                 }
                 songsAdp = new SongAdapter(this, songsToPlay);
+                lv.setAdapter(songsAdp);
+            //from playlists
+            } else if (extras.getInt("REFERENCE") == 3){
+                Playlist playlist = (Playlist) extras.getSerializable("PLAYLIST");
+                songsAdp = new SongAdapter(this, playlist.getmSongsList());
                 lv.setAdapter(songsAdp);
             }
         } else {

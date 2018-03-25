@@ -6,4 +6,5 @@
     <string name="category_albums">Albums</string>
     <string name="category_songs">Songs</string>
     <string name="category_title">Musical Structure</string>
+    <string name="plus_playlist">Add new playlist..</string>
 </resources>

@@ -2,11 +2,13 @@ package com.example.ccojo.udacitymusicalstructureapp;
 
 import android.media.Image;
 
+import java.io.Serializable;
+
 /**
  * Created by ccojo on 3/24/2018.
  */
 
-public class Song {
+public class Song implements Serializable{
     private String songName;
     private String artistName;
     private String albumName;

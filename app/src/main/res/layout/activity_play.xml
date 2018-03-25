@@ -23,6 +23,7 @@
         <TextView
             android:id="@+id/song_name"
             style="@style/text_default"
+            android:layout_marginStart="@dimen/margin_xl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size_xl"
@@ -31,6 +32,7 @@
         <TextView
             android:id="@+id/song_artist"
             style="@style/text_default"
+            android:layout_marginStart="@dimen/margin_xl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="Song Artist" />
@@ -38,6 +40,7 @@
         <TextView
             android:id="@+id/song_album"
             style="@style/text_default"
+            android:layout_marginStart="@dimen/margin_xl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="Song Album" />
@@ -49,6 +52,8 @@
         android:layout_above="@id/play_bar_button_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_marginBottom="@dimen/default_margin"
         android:layout_marginTop="@dimen/default_margin">
 

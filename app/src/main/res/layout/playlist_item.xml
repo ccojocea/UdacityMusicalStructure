@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/default_padding">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/text_default"
+        android:id="@+id/playlist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/delete_playlist_button"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        tools:text="Playlist Name" />
+
+    <ImageButton
+        android:id="@+id/delete_playlist_button"
+        android:layout_width="@dimen/button_size_small"
+        android:layout_height="@dimen/button_size_small"
+        android:layout_toStartOf="@id/item_options_button"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_centerVertical="true"
+        android:background="@drawable/delete_button"/>
+
+    <ImageButton
+        android:id="@+id/item_options_button"
+        android:layout_width="@dimen/button_size_small"
+        android:layout_height="@dimen/button_size_small"
+        android:layout_toStartOf="@id/play_item_button"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_centerInParent="true"
+        android:background="@drawable/options_button"/>
+
+    <ImageButton
+        android:id="@+id/play_item_button"
+        android:layout_width="@dimen/button_size_small"
+        android:layout_height="@dimen/button_size_small"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/play_button"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_below="@id/playlist_name"/>
+
+</RelativeLayout>
