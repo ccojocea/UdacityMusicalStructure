@@ -146,9 +146,12 @@ public class PlayActivity extends AppCompatActivity {
                 }else if(i >= 60){
                     String asTextMinutes = String.format("%02d:%02d", i/60, i % 60);
                     elapsedTimeTV.setText(asTextMinutes);
-                } else {
-                    final String asTextSeconds = String.format("%d", i);
+                } else if(i >= 10){
+                    String asTextSeconds = String.format("%d", i);
                     elapsedTimeTV.setText("00:" + asTextSeconds);
+                } else {
+                    String asTextSeconds = String.format("%d", i);
+                    elapsedTimeTV.setText("00:0" + asTextSeconds);
                 }
             }
 

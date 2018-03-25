@@ -52,8 +52,8 @@
         android:layout_above="@id/play_bar_button_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_margin"
-        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginStart="@dimen/margin_xl"
+        android:layout_marginEnd="@dimen/margin_xl"
         android:layout_marginBottom="@dimen/default_margin"
         android:layout_marginTop="@dimen/default_margin">
 
@@ -75,7 +75,7 @@
             android:layout_marginEnd="@dimen/margin_xs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progress="50"/>
+            android:progress="110"/>
 
         <TextView
             android:id="@+id/total_time"
