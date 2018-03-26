@@ -1,7 +1,5 @@
 package com.example.ccojo.udacitymusicalstructureapp;
 
-import android.media.Image;
-
 import java.io.Serializable;
 
 /**

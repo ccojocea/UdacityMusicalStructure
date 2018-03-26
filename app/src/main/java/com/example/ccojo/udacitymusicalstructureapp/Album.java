@@ -39,11 +39,7 @@ public class Album {
                 artistNameIsEqual = true;
             }
         }
-        if(albumNameIsEqual && artistNameIsEqual){
-            return true;
-        } else {
-            return false;
-        }
+        return albumNameIsEqual && artistNameIsEqual;
     }
 
     @Override

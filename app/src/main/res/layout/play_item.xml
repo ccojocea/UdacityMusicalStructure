@@ -19,21 +19,18 @@
         style="@style/text_default"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/font_size_xl"
-        android:text="Song Name Placeholder" />
+        android:textSize="@dimen/font_size_xl" />
 
     <TextView
         android:id="@+id/song_artist"
         style="@style/text_default"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Song Artist Placeholder" />
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/song_album"
         style="@style/text_default"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Song Album Placeholder" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

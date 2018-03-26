@@ -1,7 +1,5 @@
 package com.example.ccojo.udacitymusicalstructureapp;
 
-import android.util.Log;
-
 /**
  * Created by ccojo on 3/24/2018.
  */

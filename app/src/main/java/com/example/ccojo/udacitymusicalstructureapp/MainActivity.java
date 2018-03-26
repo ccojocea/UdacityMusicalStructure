@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -94,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
         allSongs.add(new Song("Diesel Power", 0,"Prodigy", R.drawable.prodigy, "The Fat of the Land", R.drawable.fatoftheland, 355));
         allSongs.add(new Song("Climbatize", 0,"Prodigy", R.drawable.prodigy, "The Fat of the Land", R.drawable.fatoftheland, 355));
         allSongs.add(new Song("Fuel My Fire", 0,"Prodigy", R.drawable.prodigy, "The Fat of the Land", R.drawable.fatoftheland, 355));
+        allSongs.add(new Song("Don't stop", 0,"ATB", R.drawable.atb, "Movin' Melodies", 0, 355));
+        allSongs.add(new Song("9 PM (Till I Come)", 0,"ATB", R.drawable.atb, "Movin' Melodies", 0, 355));
         allSongs.add(new Song("Crossfire", 0, "Gaia", R.drawable.gaia));
         allSongs.add(new Song("Empire of Hearts", 0, "Gaia", R.drawable.gaia));
         allSongs.add(new Song("Aisha", 0,"Gaia", R.drawable.gaia));
